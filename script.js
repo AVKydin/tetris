@@ -1,22 +1,45 @@
 
 const PLAYFIELD_COLUMNS = 10;
 const PLAYFIELD_ROWS = 20;
-const TETROMINO_NAMES = [
-    'O',
-    'J'
-]
+const TETROMINO_NAMES = ["O", "L", "J", "I", "T", "Z", "S"];
 
 const TETROMINOES = {
-    "O": [
-        [1,1],
-        [1,1]
+    O: [
+        [1, 1],
+        [1, 1],
     ],
-    "J": [
-        [1,0,0],
-        [1,1,1],
-        [0,0,0]
-    ]
-}
+    L: [
+        [1, 0, 0],
+        [1, 1, 1],
+        [0, 0, 0],
+    ],
+    J: [
+        [0, 0, 1],
+        [1, 1, 1],
+        [0, 0, 0],
+    ],
+    I: [
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+    ],
+    T: [
+        [0, 1, 0],
+        [1, 1, 1],
+        [0, 0, 0],
+    ],
+    S: [
+        [0, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+    ],
+    Z: [
+        [1, 1, 0],
+        [0, 1, 1],
+        [0, 0, 0],
+    ],
+};
 
 function convertPositionToIndex(row, column){
     return row * PLAYFIELD_COLUMNS + column;
