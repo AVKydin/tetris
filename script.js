@@ -45,6 +45,11 @@ function convertPositionToIndex(row, column){
     return row * PLAYFIELD_COLUMNS + column;
 }
 
+function getRandomElement(arr){
+    const randomIndex = Math.floor(Math.random() * arr.length)
+    return arr[randomIndex];
+}
+
 let playField;
 let tetromino;
 
@@ -59,14 +64,15 @@ function generatePlayField(){
 }
 
 function generateTetromino(){
-    const name = TETROMINO_NAMES[1];
+    const name = getRandomElement(TETROMINO_NAMES);
     const matrix = TETROMINOES[name];
+    const column = PLAYFIELD_COLUMNS / 2 - Math.floor(matrix.length / 2)
 
     tetromino = {
         name,
         matrix,
-        row: 3,
-        column: 5,
+        row: 0,
+        column,
     }
 }
 
