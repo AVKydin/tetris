@@ -19,6 +19,15 @@ body{
     gap: 0.5vh;
 }
 
+.container{
+    border: 2px solid red;
+    border-radius: 1vh;
+    margin-left: 3vw;
+    padding: 4vh;
+    font-size: 2rem;
+    font-family: Arial, serif;
+}
+
 .grid > div{
     height: min(4vh, 7vw);
     width: min(4vh, 7vw);
